@@ -7,8 +7,11 @@
 
 <body>
     <div id="app">
-        <?php echo view('templates/navbar') ?>
-        <?php echo view('templates/sidebar') ?>
+        <?php $auth = ['login', 'register', 'forgot password']; ?>
+        <?php if (!in_array($view_title, $auth)) : ?>
+            <?php echo view('templates/navbar') ?>
+            <?php echo view('templates/sidebar') ?>
+        <?php endif ?>
         <?php echo view($view_name) ?>
     </div>
 

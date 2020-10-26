@@ -9,6 +9,7 @@ class Login extends BaseController
     public function index()
     {
         $data = [
+            'view_title' => 'Login',
             'view_name' => 'auth/login'
         ];
         return view('layout', $data);
